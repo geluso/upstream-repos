@@ -52,7 +52,7 @@ git merge master
 Now you have merged changes from upstream to both your master branch,
 and to your new-feature-branch.
 
-## Publishing Your Changes To The Remote Source
+## Pushing and Creating a Pull Request
 When your feature is complete you need to pull in everyone's newest
 changes, push your changes back to your forked repo and create a pull
 request from GitHub.
