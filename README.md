@@ -1,5 +1,6 @@
 # Upstream Practice
-This repo is for practicing upstream pulling and pushing.
+This repo is for practicing upstream pulling and creating Pull Requests
+in GitHub.
 
 ## Initial Set Up
 * Log in to GitHub and fork this branch.
@@ -52,8 +53,9 @@ Now you have merged changes from upstream to both your master branch,
 and to your new-feature-branch.
 
 ## Publishing Your Changes To The Remote Source
-When your feature is complete you need to publish your changes to everyone
-else by pushing them.
+When your feature is complete you need to pull in everyone's newest
+changes, push your changes back to your forked repo and create a pull
+request from GitHub.
 
 ```
 git checkout master
@@ -61,10 +63,19 @@ git pull upstream master
 # resolve conflicts from bring remote changes to master
 git merge new-feature-branch
 # resolve conflicts from merging our changes onto master
-git push upstream master
 ```
 
-Notice that we always pull from upstream master before pushing to
-upstream master. This is a good practice where we're always checking
-to see if there are new changes. We can't push any of our own changes
-until we have all of the newest changes from the server.
+Notice that we always pull from upstream master. This guarantees we have
+all of the newest changes before we try to add something else new to the
+project. Pulling, pulling often, and pulling before pushing helpts mitigate
+merge conflicts.
+
+Finally, once new changes are pulled in and merged we can push our changes
+back to the forked repo.
+
+```
+git push
+```
+
+Once the changes are pushed you can log in to GitHub and create a Pull
+Request to bring your changes into the original upstream repo.
